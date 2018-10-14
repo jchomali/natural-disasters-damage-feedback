@@ -1,0 +1,114 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "filters": [],
+      "layers": [
+        {
+          "id": "vlb068f",
+          "type": "hexagon",
+          "config": {
+            "dataId": "my_data",
+            "label": "Damage",
+            "color": [
+              18,
+              147,
+              154
+            ],
+            "columns": {
+              "lat": "latitude",
+              "lng": "longitude"
+            },
+            "isVisible": true,
+            "visConfig": {
+              "opacity": 0.33,
+              "worldUnitSize": 8.05,
+              "resolution": 8,
+              "colorRange": {
+                "name": "ColorBrewer RdYlGn-6",
+                "type": "diverging",
+                "category": "ColorBrewer",
+                "colors": [
+                  "#1a9850",
+                  "#91cf60",
+                  "#d9ef8b",
+                  "#fee08b",
+                  "#fc8d59",
+                  "#d73027"
+                ],
+                "reversed": true
+              },
+              "coverage": 1,
+              "sizeRange": [
+                0,
+                500
+              ],
+              "percentile": [
+                0,
+                100
+              ],
+              "elevationPercentile": [
+                0,
+                100
+              ],
+              "elevationScale": 65,
+              "hi-precision": false,
+              "colorAggregation": "median",
+              "sizeAggregation": "average",
+              "enable3d": true
+            }
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "damage",
+              "type": "real"
+            },
+            "colorScale": "quantize",
+            "sizeField": null,
+            "sizeScale": "linear"
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "my_data": [
+              "phone",
+              "damage",
+              "timestamp"
+            ]
+          },
+          "enabled": true
+        },
+        "brush": {
+          "size": 0.5,
+          "enabled": false
+        }
+      },
+      "layerBlending": "normal",
+      "splitMaps": []
+    },
+    "mapState": {
+      "bearing": 24,
+      "dragRotate": true,
+      "latitude": 35.7769181241564,
+      "longitude": -120.58417016254137,
+      "pitch": 50,
+      "zoom": 5.530619335061026,
+      "isSplit": false
+    },
+    "mapStyle": {
+      "styleType": "dark",
+      "topLayerGroups": {},
+      "visibleLayerGroups": {
+        "label": true,
+        "road": true,
+        "border": false,
+        "building": true,
+        "water": true,
+        "land": true
+      },
+      "mapStyles": {}
+    }
+  }
+}

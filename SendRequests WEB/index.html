@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emergency SMS</title>
+    <style>
+      html, body{
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        background-color: rgb(41, 45, 52);
+      }
+      button{
+        display: inline-block;
+        width: 200px;
+        height: 90px;
+        border-radius: 10px;
+        background-color: #c0392b;
+        border: none;
+        color: white;
+        font-family: Helvetica;
+        font-weight: 700;
+        font-size: 25px;
+        cursor: pointer;
+      }
+      #container{
+        margin: 0 auto;
+        top: 50%;
+        right: 50%;
+        height: 40px;
+        transform: translateY(-90%);
+        left: 300px;
+        position: absolute;
+        width: max-content;
+      }
+      #selectCity{
+        display: inline-block;
+        width: 200px;
+        height: 90px;
+        border-radius: 10px;
+        background-color: #95a5a6;
+        border: none;
+        color: white;
+        font-family: Helvetica;
+        font-weight: 700;
+        font-size: 25px;
+        margin-right: 50px;
+        padding-right: 20px;
+      }
+      #inputRadius{
+        display: inline-block;
+        width: 200px;
+        height: 90px;
+        border-radius: 10px;
+        background-color: #ecf0f1;
+        border: none;
+        color: #95a5a6;
+        font-family: Helvetica;
+        font-weight: 700;
+        font-size: 25px;
+        margin-right: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      #inputRadius:focus, #selectCity:focus, button:focus{
+        outline: none;
+      }
+      button:hover{
+        background-color: #e74c3c;
+      }
+    </style>
+    <script>
+      function sendMassiveSMS(){
+        const Http = new XMLHttpRequest();
+        const url='https://webhooks.mongodb-stitch.com/api/client/v2.0/app/natural_disaster-rcpou/service/SendingSMS/incoming_webhook/SendingSMS';
+        Http.open("POST", url);
+        Http.send();
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <select id="selectCity" placeholder="CITY"><option>Ann Arbor</option><option>...</option><option>...</option><option>...</option><option>San Francisco</option><option>...</option><option>...</option><option>...</option></select>
+      <input id="inputRadius" type="number" min="0" placeholder="Radius (miles)">
+      <button onclick="sendMassiveSMS()">SEND</button>
+    </div>
+  </body>
+</html>
