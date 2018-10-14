@@ -1,6 +1,6 @@
 # Harvey: Natural Disasters Damage Feedback
 
-
+![Final Map](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/694/323/datas/gallery.jpg)
 
 ## **Inspiration**
 Looking to build a socially good project with a direct impact, we leaned towards natural disasters feedback especially that we realized that in case of natural disasters and despite the rapid spread of the event all over the news, which sometimes are even fake-ish; it is only after many days, effort and investment, that some information gets spread. We wanted a real-time damage feedback, especially for when quick actions are needed and figured the best way to have it is to directly get in contact with the people in the location of the disaster and request instant feedback. This could make more effective use of resources, time and access to real information in case of natural disasters.
